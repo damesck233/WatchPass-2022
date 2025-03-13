@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IRXY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/css/bootstrap.min.css" rel="stylesheet">
+  <script src="css/js/bootstrap.js"></script>
+  <link rel="stylesheet" href="css/Font/css/font-awesome.css">
+</head>
+<body style="background-color: black;">
+  <div class="sticky-top shadow mb-2" style="background-color:black">
+      <div class="container">
+          <header class="d-flex flex-wrap pt-2 pb-2">
+              <span class="fs-4 me-auto" style="color:white;"><i class="fa fa-paper-plane text-primary" aria-hidden="true"></i>&nbsp;IRXY</span>
+          </header> 
+      </div>
+  </div>
+  <p></p>
+  <!-- 1 -->
+  <div class="container mt-3">
+  <div class="alert alert-success">
+    <strong>一周年：</strong> <a href="kcb.html"><div id="countdown"></div></a>
+  </div>
+  <!-- 1 -->
+	<script>
+	// 设置目标日期，这里以2022年元旦为例
+	var countDownDate = new Date("Jan 1, 2024 00:00:00").getTime();
+	
+	// 更新倒计时函数
+	var x = setInterval(function() {
+  		var now = new Date().getTime();
+
+  		var distance = countDownDate - now;
+  		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+  		document.getElementById("countdown").innerHTML = days + " 天";
+
+  		if (distance < 0) {
+    		clearInterval(x);
+    		document.getElementById("countdown").innerHTML = "Happy New Year!";
+  		}
+	}, 1000);
+	</script>
+</body>
+</html>
